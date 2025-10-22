@@ -33,9 +33,6 @@ jobs:
       - name: install deps
         run: npm ci
 
-      - name: start app
-        run: npm run dev &
-
       - name: run cypress tests
         uses: cypress-io/github-action@v6
         id: cypress
@@ -53,3 +50,6 @@ jobs:
         with:
           name: result
           path: result.txt
+
+  badge:
+    
