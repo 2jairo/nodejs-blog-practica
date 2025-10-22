@@ -10,10 +10,10 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v6
         with:
-          node-version: '22'
+          node-version: '18'
 
       - name: install deps
-        run: npm i
+        run: npm ci
       
       - name: run linter
         run: npm run lint
