@@ -17,4 +17,27 @@ jobs:
       
       - name: run linter
         run: npm run lint
-        
+
+  cypress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v5
+  
+      - name: setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+
+      - name: install deps
+        run: npm ci
+
+      - name: start app
+        run: npm run dev &
+
+      - name: run cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm run dev
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 60
