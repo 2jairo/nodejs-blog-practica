@@ -22,6 +22,8 @@ jobs:
   cypress:
     runs-on: ubuntu-latest
     needs: linter
+    outputs:
+      outcome: ${{ steps.cypress_output.outcome }}
     steps:
       - name: checkout code
         uses: actions/checkout@v5
@@ -54,6 +56,7 @@ jobs:
           path: result.txt
 
       - name: output
+        id: cypress_output
         run: echo "outcome=${{ steps.cypress.outcome }}" >> $GITHUB_OUTPUT
 
   add_badge:
@@ -77,6 +80,7 @@ jobs:
             git commit -m "Update Cypress test badge"
             git push
           fi
+
   deploy_vercel:
     runs-on: ubuntu-latest
     needs: cypress
