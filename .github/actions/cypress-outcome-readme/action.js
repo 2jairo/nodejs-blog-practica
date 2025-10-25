@@ -1,6 +1,7 @@
 import fs from "fs"
 
 const getOutcome = () => {
+    console.log(process.argv[2])
     if(process.argv[2] === 'success') { // node script.js <arg2>
         return 'success-green'
     } else if(process.argv[2] === 'failure') {
