@@ -113,7 +113,7 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
         with:
-          recipient: ${{ secrets.EMAIL_RECIEVER }}
+          mail_reciever: ${{ secrets.EMAIL_RECIEVER }}
           linter_result: ${{ needs.linter.result }}
           cypress_result: ${{ needs.cypres.result }}
           badge_result: ${{ needs.add_badge.result }}
