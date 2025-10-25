@@ -54,7 +54,7 @@ jobs:
           path: result.txt
 
       - name: output
-        run: echo "outcome=${{ steps.cypress.outcome }}" > $GITHUB_OUTPUT
+        run: echo "outcome=${{ steps.cypress.outcome }}" >> $GITHUB_OUTPUT
 
   add_badge:
     runs-on: ubuntu-latest
