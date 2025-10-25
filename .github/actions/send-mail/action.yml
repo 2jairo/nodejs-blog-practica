@@ -37,4 +37,4 @@ runs:
       
     - name: run script
       shell: bash
-      run: node .github/actions/send-mail/build/index.js
+      run: node .github/actions/send-mail/dist/index.js
