@@ -15,4 +15,4 @@ runs:
         cache: npm
       
     - name: 'update readme'
-      run: node .github/actions/cypress-outcome-readme.js ${{ inputs.cypress_outcome }}
+      run: node .github/actions/cypress-outcome-readme/action.js ${{ inputs.cypress_outcome }}
