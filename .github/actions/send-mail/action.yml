@@ -27,6 +27,10 @@ runs:
         node-version: '20'
         cache: npm
 
+    - name: install deps
+      shell: bash
+      run: npm ci
+
     - name: build script
       shell: bash
       run: npm run build
