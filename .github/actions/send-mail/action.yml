@@ -1,0 +1,36 @@
+name: send workflow result email
+description: send workflow result email
+
+inputs:
+  mail_reciever:
+    description: 'Email reciever'
+    required: true
+  linter_result:
+    description: 'Linter job result'
+    required: true
+  cypress_result:
+    description: 'Cypress job result'
+    required: true
+  badge_result:
+    description: 'Badge job result'
+    required: true
+  deploy_result:
+    description: 'Deploy job result'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 'setup node'
+      uses: actions/setup-node@v6
+      with:
+        node-version: '20'
+        cache: npm
+
+    - name: build script
+      shell: bash
+      run: npm run build
+      
+    - name: run script
+      shell: bash
+      run: node .github/actions/send-mail/build/index.js
