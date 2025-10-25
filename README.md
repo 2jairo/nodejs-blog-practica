@@ -1,7 +1,7 @@
 <!---BADGE_TESTED-WITH-CYPRESS-->
 [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
 <!--BADGE_CYPRESS-WORKFLOW-OUTCOME-->
-<!---->
+![outcome](https://img.shields.io/badge/test-cancelled-yellow)
 
 ## Getting Started
 
