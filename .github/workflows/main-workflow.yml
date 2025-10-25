@@ -106,7 +106,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Send email notification
-        uses: ./.github/actions/send-notification
+        uses: ./.github/actions/send-mail
         env:
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
