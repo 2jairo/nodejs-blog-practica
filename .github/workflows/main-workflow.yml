@@ -63,7 +63,7 @@ jobs:
       - name: update badge in README
         uses: ./.github/actions/cypress-outcome-readme
         with:
-          cypress_outcome: ${{ needs.cypress.outputs.outcome }}
+          cypress_outcome: ${{ needs.cypress.outcome }}
 
       - name: commit and push badge update
         run: |
