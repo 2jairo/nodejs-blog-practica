@@ -54,7 +54,7 @@ jobs:
           path: result.txt
 
       - name: output
-        run: echo "outcome=${{ steps.cypress.outcome }}"
+        run: echo "outcome=${{ steps.cypress.outcome }}" >> $GITHUB_OUTPUT
 
   add_badge:
     runs-on: ubuntu-latest
@@ -91,3 +91,5 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
+
+  notification:
