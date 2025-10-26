@@ -3,63 +3,83 @@
 <!--BADGE_CYPRESS-WORKFLOW-OUTCOME-->
 ![outcome](https://img.shields.io/badge/test-success-green)
 
-## Getting Started
+# Practica
 
-This repository demonstrates a Next.js project with end-to-end tests powered by Cypress.
+### Linter Job
 
-### Requirements
-- Node.js >= 16
-- npm or yarn
-- Git
+- Workflow
 
-### Install
-1. Clone the repo:
-    git clone <repo-url>
-2. Install dependencies:
-    npm install
-    # or
-    yarn install
+![img](./README_imgs/linter.png)
 
-### Available Scripts
-- npm run dev — Start Next.js dev server (http://localhost:3000)
-- npm run build — Build production bundle
-- npm run start — Start production server
-- npm run test:e2e — Open Cypress Test Runner
-- npm run test:e2e:run — Run Cypress tests headlessly
+- Resultat en el que vetgem que el linter retorna errors
 
-Add these scripts to package.json if missing:
-```json
-{
-  "scripts": {
-     "dev": "next dev",
-     "build": "next build",
-     "start": "next start",
-     "test:e2e": "cypress open",
-     "test:e2e:run": "cypress run"
-  }
-}
-```
+![img](./README_imgs/linter_fail.png)
 
-### Running Cypress
-1. Start the app in a terminal:
-    npm run dev
-2. In another terminal, open Cypress:
-    npm run test:e2e
-3. To run headless in CI:
-    npm run test:e2e:run
+- Una volta corregits, vetgem que el linter no retorna errors
 
-### Writing Tests
-Place tests under cypress/e2e/*.cy.js. Example checks:
-- Page loads
-- Navigation works
-- Forms submit correctly
+![img](./README_imgs/linter_success.png)
 
-### CI Tips
-- Start the app (npm run build && npm run start) before running cypress run
-- Use --record and projectId for Cypress Dashboard integration
+### Cypress 
 
-### Contributing
-Contributions welcome. Open issues or PRs with clear descriptions and test cases.
+- Workflow
 
-### License
-Specify your license in LICENSE file (e.g., MIT).
+![img](./README_imgs/cypress.png)
+
+- Artifact
+
+![img](./README_imgs/cypress_artifact.png)
+
+- Artifact arxiu
+
+![img](./README_imgs/cypress_result.png)
+
+
+### Add badge
+
+- Worflow
+
+![img](./README_imgs/add_badge.png)
+
+- Action creada
+
+![img](./README_imgs/add_badge_action.png)
+![img](./README_imgs/add_badge_action_js.png)
+![img](./README_imgs/add_badge_readme.png)
+
+### Deploy job
+
+- Workflow
+
+![img](./README_imgs/deploy.png)
+
+- El worflow necesita configurar els secrets VERCEL_TOKEN, VERCEL_ORG_ID i VERCEL_PROJECT_ID. Més abaix s'explica com agregar-ho a github. URL: <https://nodejs-blog-practica-12341234123.vercel.app/>
+
+- Per a obtindre els secrets nomenats, ens crearem un conter en <https://vercel.com/>, després, crearem un projecte i obtindrem el PROJECT_ID desde el seguent menu
+
+![alt text](./README_imgs/vercel_create_project.png)
+![alt text](./README_imgs/vercel_project_id.png)
+
+- El ORG_ID s'obté de la seguent forma
+
+![alt text](./README_imgs/vercel_org_id1.png)
+![alt text](./README_imgs/vercel_org_id2.png)
+
+- El TOKEN s'obté de la seguent forma
+
+![alt text](./README_imgs/vercel_token.png)
+
+
+# Enviament de notificació
+
+- Workflow
+
+![alt text](./README_imgs/send_mail.png)
+
+- Action creada
+
+![alt text](./README_imgs/send_mail_action.png)
+
+
+# Secrets
+
+![alt text](./README_imgs/secrets.png)
