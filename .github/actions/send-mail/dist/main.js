@@ -41191,7 +41191,7 @@ async function run() {
 
         const info = await transporter.sendMail(mailOptions);
         core.info(`Email sent: ${info.messageId}`)
-    } catch (error) {
+    } catch (err) {
         core.setFailed(`Error: ${err.message} -> ${err.stack}`)      
     }
 }
