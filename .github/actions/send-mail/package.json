@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild index.js --bundle --platform=node --format=esm --outfile=dist/main.js"
+    "build": "webpack"
   },
   "keywords": [],
   "type": "module",
@@ -12,9 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.11.1",
-    "nodemailer": "^7.0.10"
-  },
-  "devDependencies": {
-    "esbuild": "^0.25.11"
+    "nodemailer": "^7.0.10",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
   }
 }

@@ -44,5 +44,5 @@ try {
 
     core.info(`Email sent: ${info.messageId}`)
 } catch (err) {
-    core.error(`Error: ${err.message} -> ${err.stack}`)
+    core.setFailed(`Error: ${err.message} -> ${err.stack}`)
 }
